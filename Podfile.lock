@@ -1,0 +1,20 @@
+PODS:
+  - ReSwift (6.1.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - ReSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - ReSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ReSwift: eab3c01e4279ba81b54a61e4fd6499634d20123a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: b577a482043b18b1ecec5d729efc669118fbda36
+
+COCOAPODS: 1.10.1
