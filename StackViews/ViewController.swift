@@ -26,11 +26,12 @@ class ViewController: UITableViewController {
         tableView.register(StackViewCell1.self, forCellReuseIdentifier: StackViewCell1.reuseIdentifier)
         tableView.register(StackViewCell2.self, forCellReuseIdentifier: StackViewCell2.reuseIdentifier)
         tableView.register(StackViewCell3.self, forCellReuseIdentifier: StackViewCell3.reuseIdentifier)
+        tableView.register(StackViewCell4.self, forCellReuseIdentifier: StackViewCell4.reuseIdentifier)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(onButtonClick))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,6 +47,8 @@ class ViewController: UITableViewController {
             cell.commonInit()
             cell.tableView = tableView
             return cell
+        case 4:
+            return tableView.dequeueReusableCell(withIdentifier: StackViewCell4.reuseIdentifier, for: indexPath)
         default:
             return tableView.dequeueReusableCell(withIdentifier: StackViewCell0.reuseIdentifier, for: indexPath)
         }
