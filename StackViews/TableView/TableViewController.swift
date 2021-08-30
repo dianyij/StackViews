@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  StackViews
 //
 //  Created by djiang on 7/07/21.
@@ -7,17 +7,7 @@
 
 import UIKit
 
-protocol Reuseable {
-    static var reuseIdentifier: String { get }
-}
-
-extension Reuseable {
-    static var reuseIdentifier: String {
-        String(describing: self)
-    }
-}
-
-class ViewController: UITableViewController {
+class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
@@ -27,11 +17,14 @@ class ViewController: UITableViewController {
         tableView.register(StackViewCell2.self, forCellReuseIdentifier: StackViewCell2.reuseIdentifier)
         tableView.register(StackViewCell3.self, forCellReuseIdentifier: StackViewCell3.reuseIdentifier)
         tableView.register(StackViewCell4.self, forCellReuseIdentifier: StackViewCell4.reuseIdentifier)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(onButtonClick))
+        let bbi1 = UIBarButtonItem(title: "Scroll", style: .plain, target: self, action: #selector(onScrollClick))
+        let bbi2 = UIBarButtonItem(title: "Collection", style: .plain, target: self, action: #selector(onCollectionClick))
+
+        navigationItem.rightBarButtonItems = [bbi1, bbi2]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,13 +43,19 @@ class ViewController: UITableViewController {
         case 4:
             return tableView.dequeueReusableCell(withIdentifier: StackViewCell4.reuseIdentifier, for: indexPath)
         default:
-            return tableView.dequeueReusableCell(withIdentifier: StackViewCell0.reuseIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: StackViewCell0.reuseIdentifier, for: indexPath) as! StackViewCell0
+//            print(cell)
+            return cell
         }
     }
 }
 
-extension ViewController {
-    @objc func onButtonClick() {
+extension TableViewController {
+    @objc func onScrollClick() {
         navigationController?.pushViewController(ScrollViewController(), animated: true)
+    }
+
+    @objc func onCollectionClick() {
+        navigationController?.pushViewController(CollectionViewController(), animated: true)
     }
 }

@@ -122,6 +122,6 @@ class ScrollViewController: UIViewController {
 
 extension ScrollViewController {
     @objc func onButtonClick() {
-        navigationController?.pushViewController(ViewController(), animated: true)
+        navigationController?.pushViewController(TableViewController(), animated: true)
     }
 }

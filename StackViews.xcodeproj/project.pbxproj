@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		A788E7C9A90FB79E27F795AB /* Pods_StackViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C2A5098A229908FDB71DCF /* Pods_StackViews.framework */; };
 		DE39DA37269ADB3600B4597E /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39DA36269ADB3600B4597E /* Debouncer.swift */; };
-		DE4B410526A6E00600CC826A /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B410426A6E00600CC826A /* SwitchCell.swift */; };
+		DE4B410526A6E00600CC826A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B410426A6E00600CC826A /* CollectionViewCell.swift */; };
 		DE554C882695833C00779BB6 /* StackViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE554C872695833C00779BB6 /* StackViewCell3.swift */; };
 		DE554C8A2695887900779BB6 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE554C892695887900779BB6 /* ScrollViewController.swift */; };
+		DE9CD6A626DCD7B90084B4BE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD6A526DCD7B90084B4BE /* CollectionViewController.swift */; };
+		DE9CD6A826DCD8630084B4BE /* Reuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9CD6A726DCD8630084B4BE /* Reuseable.swift */; };
 		DEAD9600269507C100583D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD95FF269507C100583D21 /* AppDelegate.swift */; };
 		DEAD9602269507C100583D21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9601269507C100583D21 /* SceneDelegate.swift */; };
-		DEAD9604269507C100583D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9603269507C100583D21 /* ViewController.swift */; };
+		DEAD9604269507C100583D21 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9603269507C100583D21 /* TableViewController.swift */; };
 		DEAD9607269507C100583D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD9605269507C100583D21 /* Main.storyboard */; };
 		DEAD9609269507C200583D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAD9608269507C200583D21 /* Assets.xcassets */; };
 		DEAD960C269507C200583D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD960A269507C200583D21 /* LaunchScreen.storyboard */; };
@@ -29,13 +31,15 @@
 		B0C2A5098A229908FDB71DCF /* Pods_StackViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CE862714BD1CDC7DF28988 /* Pods-StackViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViews.release.xcconfig"; path = "Target Support Files/Pods-StackViews/Pods-StackViews.release.xcconfig"; sourceTree = "<group>"; };
 		DE39DA36269ADB3600B4597E /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
-		DE4B410426A6E00600CC826A /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		DE4B410426A6E00600CC826A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DE554C872695833C00779BB6 /* StackViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewCell3.swift; sourceTree = "<group>"; };
 		DE554C892695887900779BB6 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		DE9CD6A526DCD7B90084B4BE /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		DE9CD6A726DCD8630084B4BE /* Reuseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reuseable.swift; sourceTree = "<group>"; };
 		DEAD95FC269507C100583D21 /* StackViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD95FF269507C100583D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAD9601269507C100583D21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEAD9603269507C100583D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEAD9603269507C100583D21 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DEAD9606269507C100583D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEAD9608269507C200583D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEAD960B269507C200583D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DE9CD6A926DCE93E0084B4BE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD9603269507C100583D21 /* TableViewController.swift */,
+				DEAD961A269545B400583D21 /* StackViewCell0.swift */,
+				DEAD961626951A5F00583D21 /* StackViewCell1.swift */,
+				DEAD96182695428500583D21 /* StackViewCell2.swift */,
+				DE554C872695833C00779BB6 /* StackViewCell3.swift */,
+				DEDC433026C3D24000223B3F /* StackViewCell4.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE9CD6AA26DCEA980084B4BE /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DE9CD6A526DCD7B90084B4BE /* CollectionViewController.swift */,
+				DE4B410426A6E00600CC826A /* CollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DE9CD6AB26DCEAA50084B4BE /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				DE554C892695887900779BB6 /* ScrollViewController.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
 		DEAD95F3269507C100583D21 = {
 			isa = PBXGroup;
 			children = (
@@ -98,19 +132,15 @@
 			children = (
 				DEAD95FF269507C100583D21 /* AppDelegate.swift */,
 				DEAD9601269507C100583D21 /* SceneDelegate.swift */,
-				DEAD961A269545B400583D21 /* StackViewCell0.swift */,
-				DEAD961626951A5F00583D21 /* StackViewCell1.swift */,
-				DEAD96182695428500583D21 /* StackViewCell2.swift */,
-				DE554C872695833C00779BB6 /* StackViewCell3.swift */,
-				DEDC433026C3D24000223B3F /* StackViewCell4.swift */,
-				DEAD9603269507C100583D21 /* ViewController.swift */,
-				DE554C892695887900779BB6 /* ScrollViewController.swift */,
 				DE39DA36269ADB3600B4597E /* Debouncer.swift */,
+				DE9CD6A726DCD8630084B4BE /* Reuseable.swift */,
+				DE9CD6A926DCE93E0084B4BE /* TableView */,
+				DE9CD6AA26DCEA980084B4BE /* CollectionView */,
+				DE9CD6AB26DCEAA50084B4BE /* ScrollView */,
 				DEAD9605269507C100583D21 /* Main.storyboard */,
 				DEAD9608269507C200583D21 /* Assets.xcassets */,
 				DEAD960A269507C200583D21 /* LaunchScreen.storyboard */,
 				DEAD960D269507C200583D21 /* Info.plist */,
-				DE4B410426A6E00600CC826A /* SwitchCell.swift */,
 			);
 			path = StackViews;
 			sourceTree = "<group>";
@@ -229,13 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9CD6A626DCD7B90084B4BE /* CollectionViewController.swift in Sources */,
 				DEAD96192695428500583D21 /* StackViewCell2.swift in Sources */,
+				DE9CD6A826DCD8630084B4BE /* Reuseable.swift in Sources */,
 				DEDC433126C3D24000223B3F /* StackViewCell4.swift in Sources */,
 				DE554C882695833C00779BB6 /* StackViewCell3.swift in Sources */,
 				DE39DA37269ADB3600B4597E /* Debouncer.swift in Sources */,
-				DEAD9604269507C100583D21 /* ViewController.swift in Sources */,
+				DEAD9604269507C100583D21 /* TableViewController.swift in Sources */,
 				DE554C8A2695887900779BB6 /* ScrollViewController.swift in Sources */,
-				DE4B410526A6E00600CC826A /* SwitchCell.swift in Sources */,
+				DE4B410526A6E00600CC826A /* CollectionViewCell.swift in Sources */,
 				DEAD961726951A5F00583D21 /* StackViewCell1.swift in Sources */,
 				DEAD9600269507C100583D21 /* AppDelegate.swift in Sources */,
 				DEAD961B269545B400583D21 /* StackViewCell0.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StackViewCell4: UITableViewCell, Reuseable {
+class StackViewCell4: UITableViewCell {
     private lazy var vStackView: UIStackView = {
         let view = UIStackView()
         view.backgroundColor = .blue

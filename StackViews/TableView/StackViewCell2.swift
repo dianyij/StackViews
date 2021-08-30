@@ -1,5 +1,5 @@
 //
-//  StackViewCell1.swift
+//  StackViewCell2.swift
 //  StackViews
 //
 //  Created by djiang on 7/07/21.
@@ -7,26 +7,28 @@
 
 import UIKit
 
-class StackViewCell1: UITableViewCell, Reuseable {
+class StackViewCell2: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
         view.distribution = .fillEqually
-        view.axis = .vertical
+        view.alignment = .firstBaseline
+        view.axis = .horizontal
         return view
     }()
 
-    private lazy var label1: UILabel = {
+    private lazy var labelLeft: UILabel = {
         let view = UILabel()
         view.backgroundColor = .orange
-        view.text = "label 1"
+        view.text = "label Left"
         return view
     }()
 
-    private lazy var label2: UILabel = {
+    private lazy var labelRight: UILabel = {
         let view = UILabel()
-        view.backgroundColor = .yellow
-        view.text = "label 2"
+        view.backgroundColor = .purple
+        view.text = "label Right"
         return view
     }()
 
@@ -38,8 +40,8 @@ class StackViewCell1: UITableViewCell, Reuseable {
 
     func setupUIs() {
         contentView.addSubview(stackView)
-        stackView.addArrangedSubview(label1)
-        stackView.addArrangedSubview(label2)
+        stackView.addArrangedSubview(labelLeft)
+        stackView.addArrangedSubview(labelRight)
     }
 
     func setupCons() {
@@ -48,15 +50,14 @@ class StackViewCell1: UITableViewCell, Reuseable {
             m.leading.equalTo(contentView.snp.leading)
             m.bottom.equalTo(contentView.snp.bottom)
             m.trailing.equalTo(contentView.snp.trailing)
-            m.height.equalTo(50).priority(.high)
         }
 
-        label1.snp.makeConstraints { m in
-            m.height.equalTo(50).priority(.high)
+        labelLeft.snp.makeConstraints { m in
+            m.height.equalTo(20).priority(.high)
         }
 
-        label2.snp.makeConstraints { m in
-            m.height.equalTo(30).priority(.high)
+        labelRight.snp.makeConstraints { m in
+            m.height.equalTo(60).priority(.high)
         }
     }
 

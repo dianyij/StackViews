@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StackViewCell0: UITableViewCell, Reuseable {
+class StackViewCell0: UITableViewCell {
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
@@ -19,6 +19,14 @@ class StackViewCell0: UITableViewCell, Reuseable {
         view.backgroundColor = .orange
         view.text = "label 1"
         return view
+    }()
+
+    private var dict: [String: String] = {
+        var a = [String: String]()
+        a["1"] = "aaa"
+        a["2"] = "aa3a"
+        a["6"] = "aa4a"
+        return a
     }()
 
     private lazy var label2: UILabel = {

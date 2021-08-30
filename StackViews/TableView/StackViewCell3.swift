@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StackViewCell3: UITableViewCell, Reuseable {
+class StackViewCell3: UITableViewCell {
     deinit {
         print("StackViewCell3 deinit")
     }
