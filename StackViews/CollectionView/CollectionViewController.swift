@@ -70,7 +70,7 @@ class CollectionViewController: UICollectionViewController {
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell1.reuseIdentifier, for: indexPath) as? CollectionViewCell1 else { return UICollectionViewCell() }
         cell.isLabel2Hidden = indexPath.row % 2 == 0
-        cell.useFrame = indexPath.row % 2 == 0
+//        cell.useFrame = indexPath.row % 2 == 0
         return cell
     }
 }
