@@ -45,6 +45,9 @@ class TableViewController: UITableViewController {
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: StackViewCell0.reuseIdentifier, for: indexPath) as! StackViewCell0
 //            print(cell)
+            cell.textLabel?.text = "111"
+            print(cell.properties)
+            dlog()
             return cell
         }
     }
