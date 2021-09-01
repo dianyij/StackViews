@@ -14,7 +14,7 @@ class CollectionViewCell0: UICollectionViewCell {
 
     private lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+        view.backgroundColor = .brown
         return view
     }()
 
@@ -38,6 +38,8 @@ class CollectionViewCell0: UICollectionViewCell {
     }
 
     func setupUIs() {
+        backgroundColor = .purple
+
         contentView.addSubview(containerView)
         containerView.addSubview(label1)
         containerView.addSubview(label2)

@@ -43,6 +43,7 @@ class CollectionViewController: UICollectionViewController {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: UICollectionViewCell.reuseIdentifier)
         collectionView.register(CollectionViewCell0.self, forCellWithReuseIdentifier: CollectionViewCell0.reuseIdentifier)
         collectionView.register(CollectionViewCell1.self, forCellWithReuseIdentifier: CollectionViewCell1.reuseIdentifier)
+        collectionView.register(CollectionViewCell2.self, forCellWithReuseIdentifier: CollectionViewCell2.reuseIdentifier)
     }
 
     @available(*, unavailable)
@@ -64,14 +65,26 @@ class CollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section % 2 == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell0.reuseIdentifier, for: indexPath) as? CollectionViewCell0 {
+        if indexPath.section % 2 == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell2.reuseIdentifier, for: indexPath) as? CollectionViewCell2 {
+            cell.heightConstant = CGFloat((indexPath.item + 1) % 4 * 30 + 80)
             return cell
         }
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell1.reuseIdentifier, for: indexPath) as? CollectionViewCell1 else { return UICollectionViewCell() }
-        cell.isLabel2Hidden = indexPath.row % 2 == 0
-//        cell.useFrame = indexPath.row % 2 == 0
+        if indexPath.section % 3 == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell1.reuseIdentifier, for: indexPath) as? CollectionViewCell1 {
+            cell.isLabel2Hidden = indexPath.row % 2 == 0
+//            cell.useFrame = indexPath.row % 2 == 0
+            return cell
+        }
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell0.reuseIdentifier, for: indexPath) as? CollectionViewCell0 else { return UICollectionViewCell() }
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.section % 2 == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell1.reuseIdentifier, for: indexPath) as? CollectionViewCell1 {
+            cell.isLabel2Hidden = indexPath.row % 2 == 0
+            cell.useFrame = indexPath.row % 2 == 0
+        }
     }
 }
 
