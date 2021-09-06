@@ -23,7 +23,7 @@ class CollectionViewCell2: UICollectionViewCell {
     lazy var label1: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        view.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
         view.backgroundColor = .orange
         view.numberOfLines = 0
         view.text = "label 1"
