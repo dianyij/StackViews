@@ -13,7 +13,7 @@ class CollectionViewCell2: UICollectionViewCell {
     }
 
     private lazy var stackView: UIStackView = {
-        let view = UIStackView()
+        let view = UIStackView(frame: bounds)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
         view.axis = .vertical
@@ -41,6 +41,7 @@ class CollectionViewCell2: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
+        print(frame)
         setupUIs()
         setupCons()
     }
@@ -56,7 +57,6 @@ class CollectionViewCell2: UICollectionViewCell {
         translatesAutoresizingMaskIntoConstraints = false
         stackView.snp.makeConstraints { m in
             m.top.equalTo(contentView.snp.top)
-            m.width.equalTo(300)
             m.leading.equalTo(contentView.snp.leading)
             m.bottom.equalTo(contentView.snp.bottom).priority(.high)
             m.trailing.equalTo(contentView.snp.trailing).priority(.high)
