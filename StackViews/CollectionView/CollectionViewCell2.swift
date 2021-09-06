@@ -12,14 +12,6 @@ class CollectionViewCell2: UICollectionViewCell {
         super.prepareForReuse()
     }
 
-    var heightConstraint: NSLayoutConstraint!
-    var heightConstant: CGFloat = 0.0 {
-        didSet {
-            heightConstraint.constant = heightConstant
-            layoutIfNeeded()
-        }
-    }
-
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -33,6 +25,7 @@ class CollectionViewCell2: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 20).isActive = true
         view.backgroundColor = .orange
+        view.numberOfLines = 0
         view.text = "label 1"
         return view
     }()
@@ -43,15 +36,6 @@ class CollectionViewCell2: UICollectionViewCell {
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.backgroundColor = .yellow
         view.text = "label 2"
-        return view
-    }()
-
-    lazy var label3: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
-        view.backgroundColor = .cyan
-        view.text = "label 3"
         return view
     }()
 
@@ -66,12 +50,10 @@ class CollectionViewCell2: UICollectionViewCell {
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(label1)
         stackView.addArrangedSubview(label2)
-        stackView.addArrangedSubview(label3)
     }
 
     func setupCons() {
-        heightConstraint = stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100)
-        heightConstraint.isActive = true
+        translatesAutoresizingMaskIntoConstraints = false
         stackView.snp.makeConstraints { m in
             m.top.equalTo(contentView.snp.top)
             m.width.equalTo(300)
